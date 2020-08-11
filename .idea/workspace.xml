@@ -170,7 +170,7 @@
       <workItem from="1597023896625" duration="867000" />
       <workItem from="1597026235719" duration="2227000" />
       <workItem from="1597075129192" duration="6252000" />
-      <workItem from="1597094557956" duration="5860000" />
+      <workItem from="1597094557956" duration="7202000" />
     </task>
     <servers />
   </component>
@@ -194,13 +194,13 @@
       <screen x="0" y="0" width="1536" height="826" />
     </state>
     <state x="93" y="93" width="1350" height="640" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog/0.0.1536.826@0.0.1536.826" timestamp="1597102162174" />
-    <state x="478" y="12" width="579" height="801" key="find.popup" timestamp="1597101322720">
+    <state x="478" y="12" width="579" height="801" key="find.popup" timestamp="1597104211747">
       <screen x="0" y="0" width="1536" height="826" />
     </state>
-    <state x="478" y="12" width="579" height="801" key="find.popup/0.0.1536.826@0.0.1536.826" timestamp="1597101322720" />
-    <state x="431" y="147" width="672" height="678" key="search.everywhere.popup" timestamp="1597102878713">
+    <state x="478" y="12" width="579" height="801" key="find.popup/0.0.1536.826@0.0.1536.826" timestamp="1597104211747" />
+    <state x="431" y="147" width="672" height="678" key="search.everywhere.popup" timestamp="1597104087723">
       <screen x="0" y="0" width="1536" height="826" />
     </state>
-    <state x="431" y="147" width="672" height="678" key="search.everywhere.popup/0.0.1536.826@0.0.1536.826" timestamp="1597102878713" />
+    <state x="431" y="147" width="672" height="678" key="search.everywhere.popup/0.0.1536.826@0.0.1536.826" timestamp="1597104087723" />
   </component>
 </project>
