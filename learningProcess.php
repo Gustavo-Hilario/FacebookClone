@@ -57,6 +57,66 @@
             <!--Aplly Tailwind in webpack file-->
             <!-- Aplly Tailwind in app.scss file and if is accessing tailwind in the right place -->
 <!-- GETTING STARTED -->
+    <!-- 1- Making our first test-->
+        <!-- php artisan make:test NAME PostToTimelineTest -->
+            <!-- Configure this Test-->
+        <!-- In phpunit file configure DATABASE to working using memory -->
+        <!-- Run the test in the terminal -->
+            <!-- In Windows: .\vendor\bin\phpunit --filter FUNCTIONNAME inside your test -->
+                <!-- Will return a error because we do not have Post class -->
+                <!-- generate it with php artisan make:model NAME -m (for migrations)-->
+            <!-- Another error status 405 received not the expected 201 -->
+                <!-- in the test file use withoutExceptionHandLing() -->
+            <!--Another error for POST method not supported for this route-->
+                <!-- Go to api.php in routes file and do the config-->
+                <!-- php artisan make:controller PostController-->
+                <!-- create the store method inside PostController -->
+            <!-- Another error status 200 received not the expected 201 -->
+                <!-- Now we change the return at the store method to 201-->
+            <!-- Now it works. But we have to assertJson data in our test.-->
+                <!-- Go to TEST file and create assertJson at response-->
+            <!-- Another error for trying to get 'id' -->
+                <!-- Go to TEST file and create assertEquals at response -->
+            <!-- Another error for trying to get 'user_id' -->
+                <!-- Go to create post table file and set this info -->
+            <!-- Persist the error because we do not have actually the post-->
+                <!-- assert it in Test file with assertCount() -->
+                <!-- create it in PostController-->
+                    <!--public function store(){
+
+                        $data = request()->validate([
+                            'body' => '',
+                        ]);
+
+                        $post = request()->user()->posts()->create($data);
+
+                        return response([], 201);
+                    }-->
+                <!-- create the relationship in User.php-->
+                    <!--public function posts()
+                    {
+                    return $this->hasMany(Post::class);
+                    }-->
+                <!-- Return to PostController and change-->
+                    <!--public function store(){
+
+                    $data = request()->validate([
+                    'data.attributes.body' => '',
+                    ]);
+
+                    $post = request()->user()->posts()->create($data['data']['attributes']);
+
+                    return response([], 201);
+                    } -->
+                <!-- Error of mass assigment -->
+                    <!-- In post Model -->
+                    <!--protected $guarded = [];-->
+                <!-- Error not returning the correct expected data structure-->
+                    <!-- Change the response in PostController -->
+                    <!---->
+    <!---->
+    <!---->
+    <!---->
     <!---->
     <!---->
     <!---->

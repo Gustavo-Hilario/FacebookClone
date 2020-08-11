@@ -3,13 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="f6753a05-ddf3-41e7-88e1-b07c6047310c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/learningProcess.php" beforeDir="false" afterPath="$PROJECT_DIR$/learningProcess.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,11 +162,20 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="PHPUnit.PostToTimeLineTest">
+    <configuration name="PostToTimeLineTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\PostToTimeLineTest" file="$PROJECT_DIR$/tests/Feature/PostToTimelineTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHPUnit.PostToTimeLineTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -184,7 +190,7 @@
       <workItem from="1597075129192" duration="6252000" />
       <workItem from="1597094557956" duration="8161000" />
       <workItem from="1597113590185" duration="1192000" />
-      <workItem from="1597147982534" duration="1664000" />
+      <workItem from="1597147982534" duration="13817000" />
     </task>
     <servers />
   </component>
@@ -192,6 +198,14 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="445" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1597155305671">
+      <screen x="0" y="0" width="1536" height="826" />
+    </state>
+    <state x="445" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.826@0.0.1536.826" timestamp="1597155305671" />
+    <state x="93" y="93" width="1350" height="640" key="DiffContextDialog" timestamp="1597164471360">
+      <screen x="0" y="0" width="1536" height="826" />
+    </state>
+    <state x="93" y="93" width="1350" height="640" key="DiffContextDialog/0.0.1536.826@0.0.1536.826" timestamp="1597164471360" />
     <state x="943" y="223" key="FileChooserDialogImpl" timestamp="1597081753681">
       <screen x="0" y="0" width="1536" height="826" />
     </state>
@@ -208,13 +222,21 @@
       <screen x="0" y="0" width="1536" height="826" />
     </state>
     <state x="93" y="93" width="1350" height="640" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog/0.0.1536.826@0.0.1536.826" timestamp="1597102162174" />
+    <state x="372" y="22" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1597163566407">
+      <screen x="0" y="0" width="1536" height="826" />
+    </state>
+    <state x="372" y="22" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.826@0.0.1536.826" timestamp="1597163566407" />
+    <state x="443" y="0" width="1107" height="797" key="dock-window-1" timestamp="1597164300702">
+      <screen x="0" y="0" width="1536" height="826" />
+    </state>
+    <state x="443" y="0" width="1107" height="797" key="dock-window-1/0.0.1536.826@0.0.1536.826" timestamp="1597164300702" />
     <state x="478" y="12" width="579" height="801" key="find.popup" timestamp="1597104211747">
       <screen x="0" y="0" width="1536" height="826" />
     </state>
     <state x="478" y="12" width="579" height="801" key="find.popup/0.0.1536.826@0.0.1536.826" timestamp="1597104211747" />
-    <state x="431" y="147" width="672" height="678" key="search.everywhere.popup" timestamp="1597148821022">
+    <state x="431" y="147" width="672" height="678" key="search.everywhere.popup" timestamp="1597164304030">
       <screen x="0" y="0" width="1536" height="826" />
     </state>
-    <state x="431" y="147" width="672" height="678" key="search.everywhere.popup/0.0.1536.826@0.0.1536.826" timestamp="1597148821022" />
+    <state x="431" y="147" width="672" height="678" key="search.everywhere.popup/0.0.1536.826@0.0.1536.826" timestamp="1597164304030" />
   </component>
 </project>
