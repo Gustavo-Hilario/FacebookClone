@@ -51,7 +51,17 @@
         {{-- 6 Using Vue Router --}}
             <!-- npm i vue-router --save-dev. SEARCH -->
             <!-- In resources/js we create a router for handle all our Vue Routers -->
-        {{-- 7 --}}
-        {{-- 7 --}}
-        {{-- 7 --}}
-
+        {{-- 7 Installing Tailwind --}}
+            <!-- npm install tailwindcss --save-dev -->
+            <!-- Tailwind config. READ Docs-->
+            <!--Aplly Tailwind in webpack file-->
+            <!-- Aplly Tailwind in app.scss file and if is accessing tailwind in the right place -->
+<!-- GETTING STARTED -->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->

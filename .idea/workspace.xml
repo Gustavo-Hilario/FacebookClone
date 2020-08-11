@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f6753a05-ddf3-41e7-88e1-b07c6047310c" name="Default Changelist" comment="" />
+    <list default="true" id="f6753a05-ddf3-41e7-88e1-b07c6047310c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learningProcess.php" beforeDir="false" afterPath="$PROJECT_DIR$/learningProcess.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,6 +28,9 @@
         <option value="Vue Single File Component" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -170,7 +182,9 @@
       <workItem from="1597023896625" duration="867000" />
       <workItem from="1597026235719" duration="2227000" />
       <workItem from="1597075129192" duration="6252000" />
-      <workItem from="1597094557956" duration="7202000" />
+      <workItem from="1597094557956" duration="8161000" />
+      <workItem from="1597113590185" duration="1192000" />
+      <workItem from="1597147982534" duration="1664000" />
     </task>
     <servers />
   </component>
@@ -198,9 +212,9 @@
       <screen x="0" y="0" width="1536" height="826" />
     </state>
     <state x="478" y="12" width="579" height="801" key="find.popup/0.0.1536.826@0.0.1536.826" timestamp="1597104211747" />
-    <state x="431" y="147" width="672" height="678" key="search.everywhere.popup" timestamp="1597104087723">
+    <state x="431" y="147" width="672" height="678" key="search.everywhere.popup" timestamp="1597148821022">
       <screen x="0" y="0" width="1536" height="826" />
     </state>
-    <state x="431" y="147" width="672" height="678" key="search.everywhere.popup/0.0.1536.826@0.0.1536.826" timestamp="1597104087723" />
+    <state x="431" y="147" width="672" height="678" key="search.everywhere.popup/0.0.1536.826@0.0.1536.826" timestamp="1597148821022" />
   </component>
 </project>
