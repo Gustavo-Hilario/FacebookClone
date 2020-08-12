@@ -13,6 +13,7 @@ class PostToTimelineTest extends TestCase
 //To make our database refresh after every single Test
     use RefreshDatabase;
 
+    /* IMPORTANT: Without this our code can not run*/
     /** @test */
 
     public function a_user_can_post_a_text_post()
@@ -43,6 +44,13 @@ class PostToTimelineTest extends TestCase
                     /*To be more specific we use post_id that is different from JSON API DOCS*/
                     'post_id' => $post->id,
                     'attributes' => [
+                        'posted_by' => [
+                            'data' => [
+                                'attributes' => [
+                                    'name' => $user->name,
+                                ]
+                            ]
+                        ],
                         'body' => 'Testing Body',
                     ]
                 ],

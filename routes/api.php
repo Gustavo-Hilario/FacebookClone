@@ -21,6 +21,9 @@ Route::middleware('auth:api')->group(function (){
     });
 
     /* Here we dont need /api/posts because we are in api routes */
+    Route::get('/posts', 'PostController@index');
+
     Route::post('/posts', 'PostController@store');
+
 });
 
