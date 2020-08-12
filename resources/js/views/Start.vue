@@ -1,11 +1,13 @@
 <template>
-    <div>Natalia Samanarata</div>
+    <div></div>
 </template>
 
 <script>
+
     export default {
         name: "Start"
     }
+
 </script>
 
 <style scoped>
