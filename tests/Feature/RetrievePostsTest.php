@@ -22,7 +22,9 @@ class RetrievePostTest extends TestCase
 
     public function a_user_can_retrieve_posts()
     {
+        /*test error of - Invalid JSON was returned from the route */
         $this->withoutExceptionHandling();
+
         $this->actingAs($user = factory(User::class)->create(), 'api');
         $posts = factory(Post::class, 2)->create(['user_id' => $user->id]);
 

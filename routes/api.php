@@ -16,14 +16,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:api')->group(function (){
 
-    Route::get('/user', function (Request $request) {
-        return $request->user();
-    });
-
-    /* Here we dont need /api/posts because we are in api routes */
-    Route::get('/posts', 'PostController@index');
-
-    Route::post('/posts', 'PostController@store');
+    Route::apiResources([
+        /*in this way we avoid passing the method: @index or @store*/
+        'posts' => 'PostController',
+        'users' => 'UserController',
+    ]);
 
 });
 
