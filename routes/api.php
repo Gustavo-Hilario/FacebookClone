@@ -16,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:api')->group(function (){
 
+    Route::get('auth-user', 'AuthUserController@show');
+
     Route::apiResources([
         /*in this way we avoid passing the method: @index or @store*/
         '/posts' => 'PostController',
