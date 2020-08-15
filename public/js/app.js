@@ -2196,6 +2196,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _components_Post__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../components/Post */ "./resources/js/components/Post.vue");
 //
 //
 //
@@ -2204,12 +2205,33 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Show",
+  components: {
+    Post: _components_Post__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
   data: function data() {
     return {
       user: null,
-      loading: true
+      posts: null,
+      userLoading: true,
+      postLoading: true
     };
   },
   mounted: function mounted() {
@@ -2218,18 +2240,18 @@ __webpack_require__.r(__webpack_exports__);
     /*We can use $route.params.userID because of vue-router */
     axios.get('/api/users/' + this.$route.params.userId).then(function (res) {
       _this.user = res.data;
-      _this.loading = false;
+      _this.userLoading = false;
     })["catch"](function (error) {
       console.log("unable to fetch the user from the server");
     })["finally"](function () {
-      _this.loading = false;
+      _this.userLoading = false;
     });
-    axios.get('/api/posts' + this.$route.params.userId).then(function (res) {
+    axios.get('/api/users/' + this.$route.params.userId + '/posts').then(function (res) {
       _this.posts = res.data;
-      _this.loading = false;
     })["catch"](function (error) {
       console.log('Unable to fetch posts');
-      _this.loading = false;
+    })["finally"](function () {
+      _this.postLoading = false;
     });
   }
 });
@@ -38449,24 +38471,72 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c(
+    "div",
+    { staticClass: "flex flex-col items-center" },
+    [
+      _c("div", { staticClass: "relative mb-8" }, [
+        _vm._m(0),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass:
+              "flex items-center absolute bottom-0 left-0 -mb-8 ml-12 z-20"
+          },
+          [
+            _vm._m(1),
+            _vm._v(" "),
+            _c("p", { staticClass: "ml-4 text-2xl text-gray-100" }, [
+              _vm._v(_vm._s(_vm.user.data.attributes.name))
+            ])
+          ]
+        )
+      ]),
+      _vm._v(" "),
+      _vm.postLoading
+        ? _c("p", [_vm._v(" Loading Posts... ")])
+        : _vm._l(_vm.posts.data, function(post) {
+            return _c("Post", { key: post.data.post_id, attrs: { post: post } })
+          }),
+      _vm._v(" "),
+      !_vm.postLoading && _vm.posts - _vm.data - _vm.lenght < 1
+        ? _c("p", [_vm._v(" No posts found. Get Started ...")])
+        : _vm._e()
+    ],
+    2
+  )
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("div", { staticClass: "w-100 h-64 overflow-hidden" }, [
-        _c("img", {
-          staticClass: "object-cover w-full",
-          attrs: {
-            src:
-              "https://images.pexels.com/photos/847402/pexels-photo-847402.jpeg?auto=compress",
-            alt: "User Banner"
-          }
-        })
-      ])
+    return _c("div", { staticClass: "w-100 h-64 overflow-hidden z-10" }, [
+      _c("img", {
+        staticClass: "object-cover w-full",
+        attrs: {
+          src:
+            "https://images.pexels.com/photos/847402/pexels-photo-847402.jpeg?auto=compress",
+          alt: "User Banner"
+        }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "w-32" }, [
+      _c("img", {
+        staticClass:
+          "w-32 h-32 object-cover border-4 border-gray-200 shadow-lg rounded-full",
+        attrs: {
+          src:
+            "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+          alt: "Profile User"
+        }
+      })
     ])
   }
 ]
@@ -54303,15 +54373,14 @@ __webpack_require__.r(__webpack_exports__);
 /*!*******************************************!*\
   !*** ./resources/js/views/Users/Show.vue ***!
   \*******************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Show_vue_vue_type_template_id_7d3159ba_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Show.vue?vue&type=template&id=7d3159ba&scoped=true& */ "./resources/js/views/Users/Show.vue?vue&type=template&id=7d3159ba&scoped=true&");
 /* harmony import */ var _Show_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Show.vue?vue&type=script&lang=js& */ "./resources/js/views/Users/Show.vue?vue&type=script&lang=js&");
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _Show_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _Show_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -54341,7 +54410,7 @@ component.options.__file = "resources/js/views/Users/Show.vue"
 /*!********************************************************************!*\
   !*** ./resources/js/views/Users/Show.vue?vue&type=script&lang=js& ***!
   \********************************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
