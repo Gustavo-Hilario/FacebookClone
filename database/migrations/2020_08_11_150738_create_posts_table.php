@@ -17,6 +17,8 @@ class CreatePostsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->text('body');
+            /*nullable make image be optional*/
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }

@@ -38113,7 +38113,7 @@ var render = function() {
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "text-sm text-gray-600" }, [
-              _vm._v("12 mins")
+              _vm._v(_vm._s(_vm.post.data.attributes.posted_at))
             ])
           ])
         ]),
@@ -38123,7 +38123,17 @@ var render = function() {
         ])
       ]),
       _vm._v(" "),
-      _vm._m(1),
+      _vm.post.data.attributes.image
+        ? _c("div", { staticClass: "w-full" }, [
+            _c("img", {
+              staticClass: "w-full",
+              attrs: {
+                src: _vm.post.data.attributes.image,
+                alt: "post image 1"
+              }
+            })
+          ])
+        : _vm._e(),
       _vm._v(" "),
       _c(
         "div",
@@ -38259,21 +38269,6 @@ var staticRenderFns = [
           src:
             "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
           alt: "Profile User"
-        }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "w-full " }, [
-      _c("img", {
-        staticClass: "w-full",
-        attrs: {
-          src:
-            "https://cdn.pixabay.com/photo/2020/02/18/16/45/mountain-landscape-4860042_960_720.jpg",
-          alt: "post image 1"
         }
       })
     ])
