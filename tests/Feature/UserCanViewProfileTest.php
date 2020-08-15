@@ -19,7 +19,7 @@ class UserCanViewProfileTest extends TestCase
         $this->withoutExceptionHandling();
 
         $this->actingAs($user = factory(User::class)->create(), 'api');
-        $posts = factory(Post::class, 2)->create(['user_id' => $user->id]);
+        $posts = factory(Post::class)->create(['user_id' => $user->id]);
 
         $response = $this->get('/api/users/' .  $user->id);
 
@@ -37,4 +37,46 @@ class UserCanViewProfileTest extends TestCase
                 ]
             ]);
     }
+
+    /** @test */
+
+    public function a_user_can_fetch_posts_for_a_profile()
+    {
+        /*test error of - Invalid JSON was returned from the route */
+        $this->withoutExceptionHandling();
+
+        $this->actingAs($user = factory(User::class)->create(), 'api');
+        $post = factory(Post::class)->create(['user_id' => $user->id]);
+
+        $response = $this->get('/api/users/' .  $user->id . '/posts');
+
+        $response->assertStatus(200)
+            ->assertJson([
+                /* We are returning a collection of posts so we need this nested data structure */
+                'data' => [
+                    [
+                        'data' => [
+                            'type' => 'posts',
+                            'post_id' => $post->id,
+                            'attributes' => [
+                                'body' => $post->body,
+                                'image' => $post->image,
+                                'posted_at' => $post->created_at->diffForHumans(),
+                                'posted_by' => [
+                                    'data' => [
+                                        'attributes' => [
+                                            'name' => $user->name,
+                                        ]
+                                    ]
+                                ]
+                            ]
+                        ],
+                        'links' => [
+                            'self' => url('/posts/' . $post->id),
+                        ]
+                    ],
+                ]
+            ]);
+    }
+
 }

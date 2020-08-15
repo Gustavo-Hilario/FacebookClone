@@ -18,8 +18,9 @@ Route::middleware('auth:api')->group(function (){
 
     Route::apiResources([
         /*in this way we avoid passing the method: @index or @store*/
-        'posts' => 'PostController',
-        'users' => 'UserController',
+        '/posts' => 'PostController',
+        '/users' => 'UserController',
+        '/users/{user}/posts' => 'UserPostController',
     ]);
 
 });
