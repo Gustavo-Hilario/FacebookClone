@@ -21,7 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="f6753a05-ddf3-41e7-88e1-b07c6047310c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FriendRequestController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FriendRequestController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Friend.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Friend.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Friend.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Friend.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_16_023803_create_friends_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_16_023803_create_friends_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Feature/FriendsTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/FriendsTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -214,7 +217,7 @@
       <workItem from="1597233948592" duration="20007000" />
       <workItem from="1597327671939" duration="671000" />
       <workItem from="1597505817140" duration="11726000" />
-      <workItem from="1597527395895" duration="15205000" />
+      <workItem from="1597527395895" duration="18656000" />
     </task>
     <servers />
   </component>
@@ -256,6 +259,10 @@
       <screen x="0" y="0" width="1536" height="826" />
     </state>
     <state x="498" y="166" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.826@0.0.1536.826" timestamp="1597513035151" />
+    <state x="548" y="337" key="#com.jetbrains.php.lang.intentions.PhpImportClassDialog#" timestamp="1597550823044">
+      <screen x="0" y="0" width="1536" height="826" />
+    </state>
+    <state x="548" y="337" key="#com.jetbrains.php.lang.intentions.PhpImportClassDialog#/0.0.1536.826@0.0.1536.826" timestamp="1597550823044" />
     <state x="93" y="93" width="1350" height="640" key="DiffContextDialog" timestamp="1597164471360">
       <screen x="0" y="0" width="1536" height="826" />
     </state>
@@ -304,9 +311,9 @@
       <screen x="0" y="0" width="1536" height="826" />
     </state>
     <state x="410" y="128" width="700" height="530" key="recent.locations.popup/0.0.1536.826@0.0.1536.826" timestamp="1597234093319" />
-    <state x="431" y="147" width="672" height="678" key="search.everywhere.popup" timestamp="1597548212882">
+    <state x="431" y="147" width="672" height="678" key="search.everywhere.popup" timestamp="1597551396152">
       <screen x="0" y="0" width="1536" height="826" />
     </state>
-    <state x="431" y="147" width="672" height="678" key="search.everywhere.popup/0.0.1536.826@0.0.1536.826" timestamp="1597548212882" />
+    <state x="431" y="147" width="672" height="678" key="search.everywhere.popup/0.0.1536.826@0.0.1536.826" timestamp="1597551396152" />
   </component>
 </project>
