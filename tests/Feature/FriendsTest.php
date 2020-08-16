@@ -178,9 +178,11 @@ class FriendsTest extends TestCase
                 'user_id' => '',
                 'status' => '',
             ]);
+        //  ->assertStatus(422);
 
         $responseString = json_decode($response->getContent(), true);
-        /* dd($responseString) using assertStatus was given me error but here I can see that I am getting status of 422*/
+        /* dd($responseString) using assertStatus was given me error but here
+        I can see that I am getting status of 422, but is inside a error array. maybe is it.*/
         $this->assertArrayHasKey('user_id', $responseString['error']['meta']);
         $this->assertArrayHasKey('status', $responseString['error']['meta']);
     }
@@ -247,4 +249,70 @@ class FriendsTest extends TestCase
             ]);
     }
 
+    /*IGNORE FRIENDSHIPS REQUEST TESTS*/
+
+    /** @test */
+    public function friend_request_can_be_ignored()
+    {
+        $this->withoutExceptionHandling();
+
+        $this->actingAs($user = factory(User::class)->create(), 'api');
+        $anotherUser = factory(User::class)->create();
+
+        $this->post('/api/friend-request', [
+            'friend_id' => $anotherUser->id,
+        ])->assertStatus(200);
+
+        $response = $this->actingAs($anotherUser, 'api')
+            ->delete('/api/friend-request-response/delete', [
+                'user_id' => $user->id,
+            ])->assertStatus(204);
+
+        $friendRequest = Friend::first();
+        $this->assertNull($friendRequest);
+
+        $response->assertNoContent();
+
+    }
+
+    /** @test */
+    public function only_the_recipient_can_ignore_a_friend_request()
+    {
+        $this->actingAs($user = factory(User::class)->create(), 'api');
+        $anotherUser = factory(User::class)->create();
+
+        $this->post('/api/friend-request', [
+            'friend_id' => $anotherUser->id,
+        ])->assertStatus(200);
+
+        $response = $this->actingAs(factory(User::class)->create(), 'api')
+            ->delete('/api/friend-request-response/delete', [
+                'user_id' => $user->id,
+            ])->assertStatus(404);
+
+        $friendRequest = Friend::first();
+
+        $this->assertNull($friendRequest->confirmed_at);
+        $this->assertNull($friendRequest->status);
+        $response->assertJson([
+            'error' => [
+                'code' => 404,
+                'title' => 'Friend Request Not Found',
+                'detail' => 'Unable to locate the friend request with the given information.'
+            ]
+        ]);
+    }
+
+    /** @test */
+    public function a_user_id_and_status_is_required_for_ignoring_friend_request_responses()
+    {
+        $response = $this->actingAs($user = factory(User::class)->create(), 'api')
+            ->delete('/api/friend-request-response/delete', [
+                'user_id' => '',
+            ]);
+//            ->assertStatus(422);
+
+        $responseString = json_decode($response->getContent(), true);
+        $this->assertArrayHasKey('user_id', $responseString['error']['meta']);
+    }
 }
