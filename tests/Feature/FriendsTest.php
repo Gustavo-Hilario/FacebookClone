@@ -158,4 +158,31 @@ class FriendsTest extends TestCase
         ]);
     }
 
+    /** @test */
+    public function a_friend_id_is_required_for_a_friend_request()
+    {
+        $response = $this->actingAs($user = factory(User::class)->create(), 'api')
+            ->post('/api/friend-request', [
+                'friend_id' => '',
+            ]);
+
+        $responseString = json_decode($response->getContent(), true);
+        $this->assertArrayHasKey('friend_id', $responseString['error']['meta']);
+    }
+
+    /** @test */
+    public function a_user_id_and_status_is_required_for_friend_request_responses()
+    {
+        $response = $this->actingAs($user = factory(User::class)->create(), 'api')
+            ->post('/api/friend-request-response', [
+                'user_id' => '',
+                'status' => '',
+            ]);
+
+        $responseString = json_decode($response->getContent(), true);
+        /* dd($responseString) using assertStatus was given me error but here I can see that I am getting status of 422*/
+        $this->assertArrayHasKey('user_id', $responseString['error']['meta']);
+        $this->assertArrayHasKey('status', $responseString['error']['meta']);
+    }
+
 }
