@@ -21,8 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="f6753a05-ddf3-41e7-88e1-b07c6047310c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FriendRequestResponseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FriendRequestResponseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/FriendsTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/FriendsTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/Users/Show.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Users/Show.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,10 +178,15 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="full.screen.before.presentation.mode" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js/store/modules" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\facebook_clone\resources\js\store\modules" />
+    </key>
   </component>
   <component name="RunManager" selected="PHPUnit.PostToTimeLineTest">
     <configuration name="PostToTimeLineTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -215,7 +222,7 @@
       <workItem from="1597327671939" duration="671000" />
       <workItem from="1597505817140" duration="11726000" />
       <workItem from="1597527395895" duration="19014000" />
-      <workItem from="1597583984710" duration="9329000" />
+      <workItem from="1597583984710" duration="12814000" />
     </task>
     <servers />
   </component>
@@ -313,9 +320,9 @@
       <screen x="0" y="0" width="1536" height="826" />
     </state>
     <state x="425" y="182" key="run.anything.popup/0.0.1536.826@0.0.1536.826" timestamp="1597584741400" />
-    <state x="431" y="147" width="672" height="678" key="search.everywhere.popup" timestamp="1597597262450">
+    <state x="431" y="147" width="672" height="678" key="search.everywhere.popup" timestamp="1597602026192">
       <screen x="0" y="0" width="1536" height="826" />
     </state>
-    <state x="431" y="147" width="672" height="678" key="search.everywhere.popup/0.0.1536.826@0.0.1536.826" timestamp="1597597262450" />
+    <state x="431" y="147" width="672" height="678" key="search.everywhere.popup/0.0.1536.826@0.0.1536.826" timestamp="1597602026192" />
   </component>
 </project>
