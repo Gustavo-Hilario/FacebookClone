@@ -23,6 +23,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/Post.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Post.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/store/modules/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/modules/posts.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,7 +223,7 @@
       <workItem from="1597527395895" duration="19014000" />
       <workItem from="1597583984710" duration="13490000" />
       <workItem from="1597619663081" duration="14542000" />
-      <workItem from="1597673086451" duration="25811000" />
+      <workItem from="1597673086451" duration="26308000" />
     </task>
     <servers />
   </component>
@@ -316,13 +317,13 @@
       <screen x="0" y="0" width="1536" height="826" />
     </state>
     <state x="410" y="128" width="700" height="530" key="recent.locations.popup/0.0.1536.826@0.0.1536.826" timestamp="1597234093319" />
-    <state x="425" y="182" key="run.anything.popup" timestamp="1597584741400">
+    <state x="425" y="182" key="run.anything.popup" timestamp="1597704739692">
       <screen x="0" y="0" width="1536" height="826" />
     </state>
-    <state x="425" y="182" key="run.anything.popup/0.0.1536.826@0.0.1536.826" timestamp="1597584741400" />
-    <state x="431" y="147" width="672" height="678" key="search.everywhere.popup" timestamp="1597703215290">
+    <state x="425" y="182" key="run.anything.popup/0.0.1536.826@0.0.1536.826" timestamp="1597704739692" />
+    <state x="431" y="147" width="672" height="678" key="search.everywhere.popup" timestamp="1597705017870">
       <screen x="0" y="0" width="1536" height="826" />
     </state>
-    <state x="431" y="147" width="672" height="678" key="search.everywhere.popup/0.0.1536.826@0.0.1536.826" timestamp="1597703215290" />
+    <state x="431" y="147" width="672" height="678" key="search.everywhere.popup/0.0.1536.826@0.0.1536.826" timestamp="1597705017870" />
   </component>
 </project>

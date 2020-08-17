@@ -56,6 +56,15 @@ const actions = {
             });
     },
 
+    commentPost({commit, state}, data) {
+        axios.post('/api/posts/' + data.postId + '/comment' , {body: data.body})
+            .then(res => {
+                commit('pushComments', {comments: res.data, postKey: data.postKey});
+            })
+            .catch(error => {
+            });
+    },
+
 };
 
 const mutations = {
@@ -78,6 +87,10 @@ const mutations = {
 
     pushLikes(state, data) {
         state.newsPosts.data[data.postKey].data.attributes.likes = data.likes;
+    },
+
+    pushComments(state, data) {
+        state.newsPosts.data[data.postKey].data.attributes.comments = data.comments;
     },
 };
 

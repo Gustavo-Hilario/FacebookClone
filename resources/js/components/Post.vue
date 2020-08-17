@@ -51,11 +51,12 @@
             </button>
         </div>
 
-        <!--Toogle to see comments-->
+        <!--Toogle to see comments and POST-->
         <div v-if="comments" class="border-t border-gray-400 p-4 pt-2">
             <div class="flex">
                 <input v-model="commentBody" type="text" name="comments" class="w-full pl-4 h-8 bg-gray-400 rounded-lg focus:outline-none">
-                <button v-if="commentBody" class="bg-gray-200 ml-2 px-2 py-1 rounded-lg focus:outline-none">
+                <button v-if="commentBody" class="bg-gray-200 ml-2 px-2 py-1 rounded-lg focus:outline-none"
+                @click="$store.dispatch('commentPost', { body: commentBody, postId: post.data.post_id, postKey: $vnode.key }); commentBody = ''">
                     Post
                 </button>
             </div>
