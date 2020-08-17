@@ -37,7 +37,7 @@
 
         <div v-else-if="posts.length < 1"> No posts found. Get Started ...</div>
 
-        <Post v-else v-for="post in posts.data" :key="post.data.post_id" :post="post"></Post>
+        <Post v-else v-for="(post, postKey) in posts.data" :key="postKey" :post="post"></Post>
 
 
     </div>
