@@ -1,6 +1,7 @@
 const state = {
     newsPosts: null,
     newsPostsStatus: null,
+    postMessage: '',
 };
 
 const getters = {
@@ -11,7 +12,11 @@ const getters = {
     newsStatus: state => {
         return {
             newsPostsStatus: state.newsPostsStatus,
-        };
+        }
+    },
+
+    postMessage: state => {
+        return state.postMessage;
     },
 
 };
@@ -28,16 +33,39 @@ const actions = {
             .catch(error => {
                 commit('setPostsStatus', 'error');
             });
-    }
+    },
+
+    postMessage({commit, state}) {
+        commit('setPostsStatus', 'loading');
+
+        axios.post('/api/posts', {body: state.postMessage})
+            .then(res => {
+                commit('pushPost', res.data);
+                commit('updateMessage', '');
+            })
+            .catch(error => {
+            });
+    },
+
 };
 
 const mutations = {
     setPosts(state, posts) {
         state.newsPosts = posts;
     },
+
     setPostsStatus(state, status) {
         state.newsPostsStatus = status;
-    }
+    },
+
+    updateMessage(state, message) {
+        state.postMessage = message;
+    },
+
+    pushPost(state, post) {
+        /* unshift will push new post at top */
+        state.newsPosts.data.unshift(post);
+    },
 };
 
 export default {
