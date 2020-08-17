@@ -15,8 +15,6 @@ class LikesTest extends TestCase
     /** @test */
     public function a_user_can_like_a_post()
     {
-        $this->withoutExceptionHandling();
-
         $this->actingAs($user = factory(User::class)->create(), 'api');
         $post = factory(Post::class)->create(['id' => 123]);
 
@@ -45,4 +43,47 @@ class LikesTest extends TestCase
             ]
         ]);
     }
+
+    /** @test */
+    public function posts_are_returned_with_likes()
+    {
+        $this->actingAs($user = factory(User::class)->create(), 'api');
+        $post = factory(Post::class)->create(['id' => 123, 'user_id' => $user->id]);
+        $this->post('/api/posts/' . $post->id . '/like')
+            ->assertStatus(200);
+
+        $response = $this->get('/api/posts')
+            ->assertStatus(200)
+            ->assertJson([
+                /*collection inside collection*/
+                'data' => [
+                    /*array of posts ... collection*/
+                    [
+                        'data' => [
+                            'type' => 'posts',
+                            'attributes' => [
+                                /*collection of likes*/
+                                'likes' => [
+                                    'data' => [
+                                        [
+                                            'data' => [
+                                                'type' => 'likes',
+                                                'like_id' => 1,
+                                                'attributes' => [
+
+                                                ]
+                                            ]
+                                        ]
+                                    ],
+                                    /*helpers to make our front communicate with back-end*/
+                                    'like_count' => 1,
+                                    'user_likes_post' => true,
+                                ],
+                            ]
+                        ]
+                    ]
+                ]
+            ]);
+    }
+
 }
