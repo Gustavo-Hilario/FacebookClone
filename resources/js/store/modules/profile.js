@@ -26,7 +26,11 @@ const getters = {
     },
 
     friendButtonText: (state, getters, rootState) => {
-        if(getters.friendship === null)
+        /*check if the actual user is equal at our loaded user*/
+        if(rootState.User.user.data.user_id === state.user.data.user_id)
+        {
+            return '';
+        } else if(getters.friendship === null)
         {
             return 'Add Friend';
         } else
@@ -71,13 +75,18 @@ const actions = {
             });
     },
 
-    sendFriendRequest({commit, state}, friendId){
+    sendFriendRequest({commit, getters}, friendId){
+        if(getters.friendButtonText !== 'Add Friend'){
+            return;
+        }
+
         axios.post('/api/friend-request', { 'friend_id': friendId })
             .then(res => {
                 commit('setUserFriendship', res.data);
             })
             .catch(error => {
             });
+
     },
 
     acceptFriendRequest({commit, state}, userId){
