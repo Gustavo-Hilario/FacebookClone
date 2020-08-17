@@ -21,6 +21,8 @@ class Friend extends JsonResource
                 'attributes' => [
                     /* getting error of: diffForHumans() on null. Use optinal to work with null */
                     'confirmed_at' => optional($this->confirmed_at)->diffForHumans(),
+                    'friend_id' => $this->friend_id,
+                    'user_id' => $this->user_id,
                 ]
             ],
             'links' => [
