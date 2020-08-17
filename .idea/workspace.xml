@@ -22,8 +22,7 @@
     <list default="true" id="f6753a05-ddf3-41e7-88e1-b07c6047310c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/store/modules/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/modules/profile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/views/Users/Show.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Users/Show.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -178,7 +177,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="full.screen.before.presentation.mode" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js/store/modules" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/GitHub/dCondreyAPI" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
@@ -222,7 +221,8 @@
       <workItem from="1597327671939" duration="671000" />
       <workItem from="1597505817140" duration="11726000" />
       <workItem from="1597527395895" duration="19014000" />
-      <workItem from="1597583984710" duration="12814000" />
+      <workItem from="1597583984710" duration="13490000" />
+      <workItem from="1597619663081" duration="3673000" />
     </task>
     <servers />
   </component>
@@ -272,10 +272,10 @@
       <screen x="0" y="0" width="1536" height="826" />
     </state>
     <state x="93" y="93" width="1350" height="640" key="DiffContextDialog/0.0.1536.826@0.0.1536.826" timestamp="1597164471360" />
-    <state x="943" y="223" key="FileChooserDialogImpl" timestamp="1597328245186">
+    <state x="943" y="223" key="FileChooserDialogImpl" timestamp="1597602590086">
       <screen x="0" y="0" width="1536" height="826" />
     </state>
-    <state x="943" y="223" key="FileChooserDialogImpl/0.0.1536.826@0.0.1536.826" timestamp="1597328245186" />
+    <state x="943" y="223" key="FileChooserDialogImpl/0.0.1536.826@0.0.1536.826" timestamp="1597602590086" />
     <state x="557" y="134" key="NewPhpClassDialog" timestamp="1597235354404">
       <screen x="0" y="0" width="1536" height="826" />
     </state>
