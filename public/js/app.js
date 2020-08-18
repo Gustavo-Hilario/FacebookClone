@@ -2084,6 +2084,22 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -2116,6 +2132,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         url: '/api/posts',
         acceptedFile: 'image/*',
         clickable: '.dz-clickable',
+        previewsContainer: '.dropzone-previews',
+        previewTemplate: document.querySelector('#dz-template').innerHTML,
 
         /*stop automatic submition of file*/
         autoProcessQueue: false,
@@ -2133,7 +2151,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           formData.append('body', _this.$store.getters.postMessage);
         },
         success: function success(event, res) {
-          alert('success');
+          _this.dropzone.removeAllFiles();
+
+          _this.$store.commit('pushPost', res);
         }
       };
     }
@@ -2145,6 +2165,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       } else {
         this.$store.dispatch('postMessage');
       }
+
+      this.$store.commit('updateMessage', '');
     }
   }
 });
@@ -42603,10 +42625,43 @@ var render = function() {
           ]
         )
       ])
-    ])
+    ]),
+    _vm._v(" "),
+    _vm._m(0)
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "dropzone-previews" }, [
+      _c("div", { staticClass: "hidden", attrs: { id: "dz-template" } }, [
+        _c("div", { staticClass: "dz-preview dz-file-preview mt-4" }, [
+          _c("div", { staticClass: "dz-details" }, [
+            _c("img", {
+              staticClass: "w-32 h-32",
+              attrs: { "data-dz-thumbnail": "" }
+            })
+          ]),
+          _vm._v(" "),
+          _c(
+            "button",
+            { staticClass: "text-xs", attrs: { "data-dz-remove": "" } },
+            [_vm._v("Remove")]
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "dz-progress" }, [
+          _c("span", {
+            staticClass: "dz-upload",
+            attrs: { "data-dz-upload": "" }
+          })
+        ])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -42664,14 +42719,11 @@ var render = function() {
         ])
       ]),
       _vm._v(" "),
-      _vm.post.data.attributes.image
+      _vm.post.data.attributes.image.length
         ? _c("div", { staticClass: "w-full" }, [
             _c("img", {
               staticClass: "w-full",
-              attrs: {
-                src: _vm.post.data.attributes.image,
-                alt: "post image 1"
-              }
+              attrs: { src: _vm.post.data.attributes.image, alt: "post image" }
             })
           ])
         : _vm._e(),
@@ -60376,6 +60428,7 @@ var actions = {
       body: state.postMessage
     }).then(function (res) {
       commit('pushPost', res.data);
+      commit('setPostsStatus', 'success');
       commit('updateMessage', '');
     })["catch"](function (error) {});
   },

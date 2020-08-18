@@ -31,6 +31,22 @@
                 </button>
             </div>
         </div>
+
+<!-- Dropzone Conventions - Read Docs -->
+        <div class="dropzone-previews">
+            <div id="dz-template" class="hidden">
+                <div class="dz-preview dz-file-preview mt-4">
+                    <div class="dz-details">
+                        <img data-dz-thumbnail class="w-32 h-32">
+                    </div>
+
+                    <button data-dz-remove class="text-xs">Remove</button>
+                </div>
+                <div class="dz-progress">
+                    <span data-dz-upload class="dz-upload"></span>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -73,6 +89,8 @@
                     url: '/api/posts',
                     acceptedFile: 'image/*',
                     clickable: '.dz-clickable',
+                    previewsContainer: '.dropzone-previews',
+                    previewTemplate: document.querySelector('#dz-template').innerHTML,
                     /*stop automatic submition of file*/
                     autoProcessQueue: false,
                     params: {
@@ -88,7 +106,8 @@
                         formData.append('body', this.$store.getters.postMessage);
                     },
                     success: (event, res) => {
-                        alert('success');
+                        this.dropzone.removeAllFiles();
+                        this.$store.commit('pushPost', res);
                     }
                 };
             },
@@ -102,6 +121,8 @@
                 } else {
                     this.$store.dispatch('postMessage');
                 }
+
+                this.$store.commit('updateMessage', '');
             }
         }
     }

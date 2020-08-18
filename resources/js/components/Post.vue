@@ -21,8 +21,8 @@
         </div>
 
         <!--Post Image-->
-        <div class="w-full" v-if="post.data.attributes.image">
-            <img :src="post.data.attributes.image" alt="post image 1" class="w-full">
+        <div class="w-full" v-if="post.data.attributes.image.length">
+            <img :src="post.data.attributes.image" alt="post image" class="w-full">
         </div>
 
         <!--Count for comments and Likes-->
