@@ -3,7 +3,7 @@
         <div class="flex justify-between items-center">
             <div>
                 <div class="w-8">
-                    <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Profile User" class="w-8 h-8 object-cover rounded-full">
+                    <img :src="authUser.data.attributes.profile_image.data.attributes.path" alt="Profile User" class="w-8 h-8 object-cover rounded-full">
                     <!--object-cover change the img proportions rightly-->
                 </div>
             </div>
@@ -28,11 +28,16 @@
 
 <script>
     import _ from 'lodash';
+    import { mapGetters } from 'vuex';
 
     export default {
         name: "NewPost",
 
         computed: {
+            ...mapGetters({
+               authUser: 'authUser',
+            }),
+
             postMessage: {
                 get(){
                     return this.$store.getters.postMessage;

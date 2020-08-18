@@ -5,7 +5,9 @@
         <div class="flex flex-col p-4">
             <div class="flex items-center">
                 <div class="w-8">
-                    <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Profile User" class="w-8 h-8 object-cover rounded-full">
+                    <!--Here we do not need the mapGetters from User because we have that
+                    relationship inside of our posts-->
+                    <img :src="post.data.attributes.posted_by.data.attributes.profile_image.data.attributes.path" alt="Profile User" class="w-8 h-8 object-cover rounded-full">
                 </div>
                 <div class="ml-6">
                     <div class="text-sm font-bold">{{ post.data.attributes.posted_by.data.attributes.name }}</div>
@@ -64,7 +66,7 @@
             <!-- Displaying comments-->
             <div class="flex my-4 items-center" v-for="comment in post.data.attributes.comments.data">
                 <div class="w-8">
-                    <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Profile User" class="w-8 h-8 object-cover rounded-full">
+                    <img :src="comment.data.attributes.commented_by.data.attributes.profile_image.data.attributes.path" alt="Profile User Image" class="w-8 h-8 object-cover rounded-full">
                 </div>
 
                 <div class="ml-4 flex-1">
