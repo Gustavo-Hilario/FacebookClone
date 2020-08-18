@@ -2,7 +2,7 @@
     <div v-if="status.user === 'success' && user" class="flex flex-col items-center">
         <div class="relative mb-8">
             <div class="w-100 h-64 overflow-hidden z-10">
-                <img src="https://images.pexels.com/photos/847402/pexels-photo-847402.jpeg?auto=compress" alt="User Banner" class="object-cover w-full">
+                <UploadableImage image-width="1500" image-height="300" location="cover"/>
             </div>
 
             <div class="flex items-center absolute bottom-0 left-0 -mb-8 ml-12 z-20">
@@ -46,13 +46,15 @@
 <script>
 
     import Post from '../../components/Post';
+    import UploadableImage from "../../components/UploadableImage";
     import { mapGetters } from 'vuex';
 
     export default {
         name: "Show",
 
         components: {
-            Post
+            Post,
+            UploadableImage,
         },
 
         mounted() {
