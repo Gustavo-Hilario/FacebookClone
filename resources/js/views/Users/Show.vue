@@ -2,12 +2,17 @@
     <div v-if="status.user === 'success' && user" class="flex flex-col items-center">
         <div class="relative mb-8">
             <div class="w-100 h-64 overflow-hidden z-10">
-                <UploadableImage image-width="1500" image-height="300" location="cover"/>
+                <UploadableImage image-width="1500" image-height="300"
+                                 location="cover" :user-image="user.data.attributes.cover_image"
+                                 classes="object-cover w-full" alt="User Cover Image"/>
             </div>
 
             <div class="flex items-center absolute bottom-0 left-0 -mb-8 ml-12 z-20">
                 <div class="w-32">
-                    <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Profile User" class="w-32 h-32 object-cover border-4 border-gray-200 shadow-lg rounded-full">
+                    <UploadableImage image-width="1500" image-height="300"
+                                     location="profile" :user-image="user.data.attributes.profile_image"
+                                     classes="w-32 h-32 object-cover border-4 border-gray-200 shadow-lg rounded-full"
+                                     alt="Profile User Image"/>
                 </div>
                 <p class="ml-4 text-2xl text-gray-100">{{ user.data.attributes.name }}</p>
             </div>
