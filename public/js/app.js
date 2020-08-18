@@ -2137,6 +2137,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
         /*stop automatic submition of file*/
         autoProcessQueue: false,
+        maxFiles: 1,
         params: {
           'width': 1000,
           'height': 1000
@@ -2154,6 +2155,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           _this.dropzone.removeAllFiles();
 
           _this.$store.commit('pushPost', res);
+        },
+        maxfilesexceeded: function maxfilesexceeded(file) {
+          _this.dropzone.removeAllFiles();
+
+          _this.dropzone.addFile(file);
         }
       };
     }

@@ -93,6 +93,7 @@
                     previewTemplate: document.querySelector('#dz-template').innerHTML,
                     /*stop automatic submition of file*/
                     autoProcessQueue: false,
+                    maxFiles: 1,
                     params: {
                         'width': 1000,
                         'height': 1000,
@@ -108,6 +109,10 @@
                     success: (event, res) => {
                         this.dropzone.removeAllFiles();
                         this.$store.commit('pushPost', res);
+                    },
+                    maxfilesexceeded: file => {
+                        this.dropzone.removeAllFiles();
+                        this.dropzone.addFile(file);
                     }
                 };
             },
