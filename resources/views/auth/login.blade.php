@@ -2,8 +2,8 @@
 
 @section('content')
 
-<div class="w-full flex h-full bg-gray-900">
-    <div class="w-4/5 flex justify-center mx-auto my-20 bg-gray-500">
+<div class="w-full flex h-full bg-black">
+    <div class="w-4/5 flex justify-center mx-auto my-20 bg-black">
         <div class="w-full my-auto max-w-xs">
             <form method="POST" action="{{ route('login') }}" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
                 @csrf
@@ -19,7 +19,7 @@
                     @enderror
                 </div>
 
-                <div class="mb-6">
+                <div class="mb-4">
                     <label for="password" class="block text-gray-700 text-sm font-bold mb-2">
                         {{ __('Password') }}
                     </label>
@@ -40,22 +40,23 @@
                             {{ __('Remember Me') }}
                         </label>
                     </div>
-                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                    <button type="submit" class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
                         {{ __('Login') }}
                     </button>
 
 
                 </div>
 
-                <div class="mt-2">
+                <div class="my-3 text-center">
                     @if (Route::has('password.request'))
                         <a class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="{{ route('password.request') }}">
                             {{ __('Forgot Your Password?') }}
                         </a>
                     @endif
                 </div>
-                <div class="mt-2">
-                    <a class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="{{ route('register') }}">
+                <div class="flex items-center mt-2">
+                    <p class="text-gray-700 text-xs italic">Don't have an account? Please register.</p>
+                    <a href="{{ route('register') }}" class="mr-2 inline-block align-baseline font-bold text-sm text-gray-700 hover:text-black" >
                         {{ __('Register') }}
                     </a>
                 </div>

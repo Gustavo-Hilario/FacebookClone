@@ -2,10 +2,10 @@
 
 @section('content')
 
-<div class="w-full flex h-full bg-gray-900">
-    <div class="w-4/5 flex justify-center mx-auto my-20 bg-gray-500">
+<div class="w-full flex h-full bg-black">
+    <div class="w-4/5 flex justify-center mx-auto my-20 bg-black">
         <div class="w-full my-auto max-w-xs">
-            <form method="POST" action="{{ route('register') }}" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            <form method="POST" action="{{ route('register') }}" class="bg-white shadow-md rounded px-6 py-4">
                 @csrf
                 <div class="mb-4">
                     <label for="name" class="block text-gray-700 text-sm font-bold mb-2">
@@ -31,7 +31,7 @@
                     @enderror
                 </div>
 
-                <div class="mb-6">
+                <div class="mb-4">
                     <label for="password" class="block text-gray-700 text-sm font-bold mb-2">
                         {{ __('Password') }}
                     </label>
@@ -45,7 +45,7 @@
                     <p class="text-red-500 text-xs italic">Please choose a password.</p>
                 </div>
 
-                <div class="mb-6">
+                <div class="mb-4">
                     <label for="password-confirm" class="block text-gray-700 text-sm font-bold mb-2">
                         {{ __('Confirm Password') }}
                     </label>
@@ -53,14 +53,26 @@
                     <p class="text-red-500 text-xs italic">Please confirm your password.</p>
                 </div>
 
-                <div class="flex items-center">
-                    <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                <div class="flex items-center justify-center">
+                    <button type="submit" class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
                         {{ __('Register') }}
                     </button>
+                </div>
+                <div class="flex items-center justify-center mt-4">
+                    <p class="w-3/5 text-gray-700 text-xs italic">Do you have an account?</p>
+                    <a onclick="goBack()" class="mr-2 inline-block align-baseline font-bold text-sm text-gray-700 hover:text-black" >
+                        Go Back
+                    </a>
                 </div>
             </form>
         </div>
     </div>
 </div>
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
 
 @endsection
