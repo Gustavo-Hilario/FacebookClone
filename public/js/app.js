@@ -43050,11 +43050,7 @@ var staticRenderFns = [
     return _c(
       "div",
       { staticClass: "w-1/3 bg-white p-4 border-r border-gray-400 shadow-sm" },
-      [
-        _c("h2", { staticClass: "font-bold text-2xl tracking-tight" }, [
-          _vm._v("Home")
-        ])
-      ]
+      [_c("h2", { staticClass: "font-bold text-2xl tracking-tight" })]
     )
   }
 ]
