@@ -6,8 +6,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f6753a05-ddf3-41e7-88e1-b07c6047310c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.rnd" beforeDir="false" afterPath="$PROJECT_DIR$/.rnd" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learningProcess.php" beforeDir="false" />
+>>>>>>> e3285af... "67. README"
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +168,11 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="full.screen.before.presentation.mode" value="true" />
+<<<<<<< HEAD
     <property name="last_opened_file_path" value="$PROJECT_DIR$/storage/app/public" />
+=======
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+>>>>>>> e3285af... "67. README"
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
@@ -216,7 +226,22 @@
       <workItem from="1597798639163" duration="6257000" />
       <workItem from="1597836685979" duration="22431000" />
       <workItem from="1597879038229" duration="1382000" />
+<<<<<<< HEAD
       <workItem from="1598111766079" duration="1913000" />
+=======
+      <workItem from="1597886548460" duration="3743000" />
+      <workItem from="1597896153953" duration="956000" />
+      <workItem from="1597931394942" duration="2193000" />
+      <workItem from="1597937022414" duration="320000" />
+      <workItem from="1597944172571" duration="5291000" />
+      <workItem from="1597960956184" duration="22000" />
+      <workItem from="1597961615714" duration="2748000" />
+      <workItem from="1597970850939" duration="3460000" />
+      <workItem from="1598059780055" duration="1211000" />
+      <workItem from="1598110023754" duration="1389000" />
+      <workItem from="1598111507672" duration="370000" />
+      <workItem from="1598112997679" duration="1053000" />
+>>>>>>> e3285af... "67. README"
     </task>
     <servers />
   </component>
@@ -328,10 +353,10 @@
       <screen x="0" y="0" width="1536" height="826" />
     </state>
     <state x="372" y="22" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.826@0.0.1536.826" timestamp="1597773947895" />
-    <state x="585" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597862957450">
+    <state x="585" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597888889293">
       <screen x="0" y="0" width="1536" height="826" />
     </state>
-    <state x="585" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.826@0.0.1536.826" timestamp="1597862957450" />
+    <state x="585" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.826@0.0.1536.826" timestamp="1597888889293" />
     <state x="443" y="0" width="1107" height="797" key="dock-window-1" timestamp="1597164300702">
       <screen x="0" y="0" width="1536" height="826" />
     </state>
@@ -352,9 +377,9 @@
       <screen x="0" y="0" width="1536" height="826" />
     </state>
     <state x="425" y="182" key="run.anything.popup/0.0.1536.826@0.0.1536.826" timestamp="1597704739692" />
-    <state x="431" y="147" width="672" height="678" key="search.everywhere.popup" timestamp="1597872378095">
+    <state x="431" y="147" width="672" height="678" key="search.everywhere.popup" timestamp="1597932441318">
       <screen x="0" y="0" width="1536" height="826" />
     </state>
-    <state x="431" y="147" width="672" height="678" key="search.everywhere.popup/0.0.1536.826@0.0.1536.826" timestamp="1597872378095" />
+    <state x="431" y="147" width="672" height="678" key="search.everywhere.popup/0.0.1536.826@0.0.1536.826" timestamp="1597932441318" />
   </component>
 </project>
